@@ -9,14 +9,14 @@ body, html {
 
 #container {
     position: absolute;
-    top: 50%;
+    top: 3vh; /* 3% de la altura de la pantalla */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); /* Centrado horizontalmente */
     display: block; /* Visible por defecto, controlado por JS */
 }
 
 #logo {
-    max-width: 250px; /* Ajusta este tamaño según tu logo */
+    max-width: 15vw; /* 15% del ancho de la pantalla */
     height: auto;
     
     /* Animación de flotación/respiración */
