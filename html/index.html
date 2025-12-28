@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Asegúrate de colocar tu imagen llamada 'logo.png' en la carpeta html -->
+        <img src="logo.png" alt="Logo del Servidor" id="logo">
+    </div>
+
+    <script>
+        window.addEventListener('message', function(event) {
+            const item = event.data;
+            const container = document.getElementById('container');
+            
+            if (item.type === 'show') {
+                if (item.display) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            } else if (item.type === 'toggle') {
+                if (container.style.display === 'none') {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
